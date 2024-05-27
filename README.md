@@ -1,4 +1,5 @@
 This is a project to predict customer churn.
+
 **Data source**: https://www.kaggle.com/datasets/safrin03/predictive-analytics-for-customer-churn-dataset
 
 ## Contents
