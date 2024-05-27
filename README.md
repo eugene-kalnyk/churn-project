@@ -7,6 +7,7 @@ This is a project to predict customer churn.
 ### app (main folder)
 - *Churn_smote.ipynb* — a jupyter lab notebook with model training
 - *scaler.joblib* — a saved scaler
+
 **Note:** *model.joblib* should be a part of this project as well, but the file is too large to upload to GitHub
   
 - *app.py* — a flask app for model deployment
