@@ -1,13 +1,13 @@
 
 import pandas as pd
 from flask import Flask, request, jsonify
-import joblib
+from joblib import load
 
 app = Flask(__name__)
 
 # Load the trained model and the scaler
-rf = joblib.load('model.joblib')
-scaler = joblib.load('scaler.joblib')
+lr = load(open('models/model.joblib', 'rb'))
+scaler = load(open('models/scaler.joblib', 'rb'))
 
 # Load the dataframe
 train_df = pd.read_csv('data/train.csv')
@@ -49,7 +49,7 @@ def predict():
     customer_target = customer_preprocessed['Churn']
 
     customer_features_scaled = scaler.transform(customer_features)
-    prediction = rf.predict(customer_features_scaled)
+    prediction = lr.predict(customer_features_scaled)
     output = str(int(prediction[0]))
     return jsonify(output)
 
