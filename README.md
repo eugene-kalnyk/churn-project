@@ -112,8 +112,6 @@ To deploy the app on Google Cloud, follow these steps:
     ```
 
 ## File and Directory Structure
-├── README.md ├── requirements.txt ├── app.py ├── data │ ├── train.csv │ └── data_descriptions.csv ├── Dockerfile └── scripts └── test.py
-
 
 - **README.md**: This file.
 - **requirements.txt**: Lists the dependencies required for the project.
